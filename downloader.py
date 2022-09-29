@@ -55,7 +55,7 @@ class Download:
             course_numbers = self.content.find_all('span', {'class': 'course_number'})
             return [course_number.text.strip().replace(' ', '-')
                     for course_number in course_numbers]
-        elif '/science/undergraduate/programs' in self.url:
+        else:
             course_numbers = self.content.find_all('a',
                                                    {'class': 'program-course-title'})
             
@@ -70,8 +70,10 @@ class Download:
 if __name__ == '__main__':
     
     url_math = 'https://www.mcgill.ca/mathstat/undergraduate/programs/b-sc/minor-statistics-b-sc'
-    url_science = 'https://www.mcgill.ca/study/2022-2023/faculties/science/undergraduate/programs/bachelor-science-bsc-major-software-engineering'
+    url = 'https://www.mcgill.ca/study/2022-2023/faculties/engineering/undergraduate/programs/bachelor-engineering-beng-bioengineering'
     file = courses / 'test.html'
-    dl = Download(url_math)
-    dl.get_soup(filename=str(file))
+    
+    dl = Download(url)
+    dl.request()
+    # dl.get_soup(filename=str(file))
     print(dl.get_courses_from_program_page())

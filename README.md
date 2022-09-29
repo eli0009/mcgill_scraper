@@ -6,13 +6,14 @@ A command-line program to make the course selection process easier (and less pai
 
 ## Features
 
-- Scrap for every course listed in a [math and statistics faculty](https://www.mcgill.ca/mathstat/undergraduate/programs/) undergraduate program's page: 
+- Scrap for all offered courses in a program's course listing page (listing of all programs can be found [HERE](https://www.mcgill.ca/study/2022-2023/programs/search)).
 
-https://www.mcgill.ca/mathstat/undergraduate/programs/b-sc/minor-statistics-b-sc 
+Example: https://www.mcgill.ca/study/2022-2023/faculties/science/undergraduate/programs/bachelor-science-bsc-major-software-engineering
 
-- Scrap for every course listed in a [science faculty](https://www.mcgill.ca/study/2022-2023/faculties/science/Undergraduate/programs) undergraduate program's page: 
+- Additional support for scraping the [math and statistics faculty](https://www.mcgill.ca/mathstat/undergraduate/programs/)'s undergraduate programs course listing pages: 
 
-https://www.mcgill.ca/study/2022-2023/faculties/science/undergraduate/programs/bachelor-science-bsc-major-software-engineering
+Example: https://www.mcgill.ca/mathstat/undergraduate/programs/b-sc/minor-statistics-b-sc 
+
 
 
 ## Problem
