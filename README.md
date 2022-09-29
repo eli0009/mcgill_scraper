@@ -17,7 +17,7 @@ Each course has it's own list of prerequisites and restrictions, along with its 
 Others are not so simple. Taking [ECSE 424](https://www.mcgill.ca/study/2022-2023/courses/ecse-424) as an example:
 >Prerequisites: (ECSE 324 and ECSE 250) or (ECSE 324 and COMP 250) or (COMP 251 and COMP 273)
 
-Also, some courses have 3 credits while others have 4, and there are a bunch of addisional requirements that, for example, require you to choose a certain number of courses from each category. Below are some of the restrictions:
+Also, some courses have 3 credits while others have 4, and there are additional requirements that, for example, require you to choose a certain number of courses from each category. Below are some of the restrictions:
 >Students may select either COMP 409 or ECSE 420, but not both.
 
 >Restriction(s): Not open to students who have taken or are taking COMP 451.
