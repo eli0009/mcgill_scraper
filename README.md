@@ -1,12 +1,18 @@
 # McGill Scraper
 
-THIS SOFTWARE IS STILL IN DEVELOPMENT
+THIS SOFTWARE IS STILL IN DEVELOPMENT!
 
 A command-line program to make the course selection process easier (and less painful).
 
-## Features (More to be added)
-Scrap every course listed in a [math and statistics faculty](https://www.mcgill.ca/mathstat/undergraduate/programs/) undergraduate program's page: 
+## Features
+
+- Scrap for every course listed in a [math and statistics faculty](https://www.mcgill.ca/mathstat/undergraduate/programs/) undergraduate program's page: 
+
 https://www.mcgill.ca/mathstat/undergraduate/programs/b-sc/minor-statistics-b-sc 
+
+- Scrap for every course listed in a [science faculty](https://www.mcgill.ca/study/2022-2023/faculties/science/Undergraduate/programs) undergraduate program's page: 
+
+https://www.mcgill.ca/study/2022-2023/faculties/science/undergraduate/programs/bachelor-science-bsc-major-software-engineering
 
 
 ## Problem

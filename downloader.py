@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 from pathlib import Path
+import re
 
 root = Path(__file__).parent
 courses = root / "courses"
@@ -10,7 +11,7 @@ class Download:
 
     """Download a web page using different methods."""
 
-    def __init__(self, url=None):
+    def __init__(self, url):
         self.url = url
 
     def request(self, method='GET'):
@@ -50,13 +51,27 @@ class Download:
         COMP 551
         ECSE 539
         """
-        course_numbers = self.content.find_all('span', {'class': 'course_number'})
-        return [course_number.text.strip().replace(' ', '-')
-                for course_number in course_numbers]
-    
+        if '/mathstat/undergraduate/programs' in self.url:
+            course_numbers = self.content.find_all('span', {'class': 'course_number'})
+            return [course_number.text.strip().replace(' ', '-')
+                    for course_number in course_numbers]
+        elif '/science/undergraduate/programs' in self.url:
+            course_numbers = self.content.find_all('a',
+                                                   {'class': 'program-course-title'})
+            
+            codes = []
+            p = re.compile(r'[A-Z]{4} [0-9]{3}')
+            for course_number in course_numbers:
+                m = p.search(course_number.text)
+                if m.group():
+                    codes.append(m.group().replace(' ', '-'))
+            return codes
+
 if __name__ == '__main__':
-    url = 'https://www.mcgill.ca/mathstat/undergraduate/programs/b-sc/minor-statistics-b-sc'
+    
+    url_math = 'https://www.mcgill.ca/mathstat/undergraduate/programs/b-sc/minor-statistics-b-sc'
+    url_science = 'https://www.mcgill.ca/study/2022-2023/faculties/science/undergraduate/programs/bachelor-science-bsc-major-software-engineering'
     file = courses / 'test.html'
-    dl = Download(url)
+    dl = Download(url_math)
     dl.get_soup(filename=str(file))
     print(dl.get_courses_from_program_page())
