@@ -1,4 +1,4 @@
-# McGill Course Scraper
+# McGill Scraper
 
 THIS SOFTWARE IS STILL IN DEVELOPMENT
 
